@@ -5,7 +5,8 @@ trigger:
 steps:
   - task: Npm@1
     inputs:
-      command: install
+      command: custom
+      customCommand: 'install -f'
   - script: 'npm test'
     displayName: 'Run unit tests'
     continueOnError: true
